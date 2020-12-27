@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AffectedCountriesActivity">
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_45dp"
+        android:layout_margin="@dimen/margin_10dp"
+        android:background="@drawable/edittext_shadow"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawablePadding="15dp"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/margin_10dp"
+        android:singleLine="true" />
+
+    <ListView
+        android:id="@+id/listCountryView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edtSearch"
+        android:layout_margin="@dimen/margin_10dp" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3596102289377036/7906095049"></com.google.android.gms.ads.AdView>
+
+
+    <com.leo.simplearcloader.SimpleArcLoader
+        android:id="@+id/arcLoader"
+        android:layout_width="@dimen/width_60dp"
+        android:layout_height="@dimen/width_60dp"
+        android:layout_centerInParent="true"
+        app:arc_style="simple_arc" />
+
+</RelativeLayout>
